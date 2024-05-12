@@ -150,7 +150,6 @@ $3 == name {
 }
 END {
     if (max_rows) print max_rows
-    else print "Error"
 }' matches.csv
 
 fi

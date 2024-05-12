@@ -44,8 +44,6 @@ while [ $reply -ne 7 ]; do
 
             echo "Team: $team Appearances: $appearances Goals: $goals Assists: $assists"
 
-        else
-            echo "skip"
         fi
     fi
 
@@ -66,8 +64,7 @@ while [ $reply -ne 7 ]; do
 
             echo "Team: $team_name Win Rate: 0$win_rate"
 
-        else
-            echo "no team"
+
         fi
     fi
 

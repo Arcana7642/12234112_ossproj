@@ -134,14 +134,11 @@ if [ $reply -eq 6 ]; then
 awk -F, 'NR > 1 {print NR-1 ") " $1}' teams.csv
 
 
-echo -n "Enter your team number: "
+echo -n "Enter your CHOICE(1~7): "
 read team_number
 
 
 team_name=$(awk -F, -v num="$team_number" 'NR == num+1 {print $1}' teams.csv)
-
-
-echo "You selected the team: $team_name"
 
 
 awk -F, -v name="$team_name" '
@@ -156,7 +153,7 @@ $3 == name {
 }
 END {
     if (max_rows) print max_rows
-    else print "No matches found or no positive score difference."
+    else print "Error"
 }' matches.csv
 
 fi
